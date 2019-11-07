@@ -8,14 +8,9 @@ class Firstpage extends StatelessWidget{
         
         children: <Widget>[
           Center(
-            child: Container(
+            child: Image(
+              image: AssetImage('images/Logo.png'),
               width: 350.0,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('images/Logo.png'),
-                  fit: BoxFit.fill
-                )
-              ),
             ),
           ),
           Padding(

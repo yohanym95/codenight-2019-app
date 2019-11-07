@@ -8,7 +8,7 @@ class Thirdpage extends StatelessWidget{
         
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.only(top: 10.0),
+            padding: EdgeInsets.only(top: 10.0,left: 10.0,right: 10.0),
             child: Center(
               child: Text(
                 'Department of Computing and Information Systems',
@@ -29,7 +29,27 @@ class Thirdpage extends StatelessWidget{
               ),
             ),
           ),
-          
+          Padding(
+            padding: EdgeInsets.only(top: 25.0,left: 10.0),
+            child: Text(
+              'Achievements',
+              style:TextStyle(
+                fontSize:18.0,
+                fontWeight: FontWeight.w700
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 10.0,right: 10.0, top: 10.0,bottom: 10.0),
+            child: Text(
+              '•	Successfully organized Let Me Hack V1.0 – 2018.\n•	Runners – up in Cloud Hack 2017 (Cloud – Based Hackathon) organized by the IEEE student branch of University of Colombo school of computing.\n•	Runners – up in SHE CODERess_V1.0.\n•	Runners – up in IFS Code Combat Hackathon organized by IFS (Pvt) Ltd.',
+              style: TextStyle(
+                fontStyle: FontStyle.normal,
+                fontSize: 16.0
+              ),
+            ),
+          ),
+
         ],
       ),
     );
