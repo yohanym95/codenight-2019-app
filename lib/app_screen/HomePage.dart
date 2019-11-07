@@ -2,6 +2,7 @@ import 'package:codenight_app/app_screen/registrationForm1.dart';
 import 'package:codenight_app/app_screen/registrationForm2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' as prefix0;
+import 'package:codenight_app/app_screen/combine.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -45,7 +46,10 @@ class _HomePageState extends State<HomePage> {
                     'Info',
                     style: TextStyle(color: Colors.white),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, 
+                    MaterialPageRoute(builder: (context)=>MyTabs()));
+                  },
                   color: Colors.red,
                 )
               ],
