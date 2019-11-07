@@ -7,6 +7,17 @@ class Firstpage extends StatelessWidget{
       child: ListView(
         
         children: <Widget>[
+          Center(
+            child: Container(
+              width: 350.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('images/Logo.png'),
+                  fit: BoxFit.fill
+                )
+              ),
+            ),
+          ),
           Padding(
             padding: EdgeInsets.only(top: 10.0),
             child: Center(
