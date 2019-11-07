@@ -32,19 +32,37 @@ class _MyHomePageState extends State<MyHomePage> {
     // TODO: implement initState
     super.initState();
     Future.delayed(Duration(seconds: 4), () {
-      Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => HomePage(),
-          ));
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => HomePage()),
+        (Route<dynamic> route) => false,
+      );
     });
-    
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: new Center(
-        child: new Text('Loading....'),
+      body: Container(
+        decoration: new BoxDecoration(
+          image: new DecorationImage(
+            colorFilter: new ColorFilter.mode(
+                Colors.white.withOpacity(0.45), BlendMode.dstATop),
+            image: new AssetImage("images/assetsx.png"),
+            fit: BoxFit.fill,
+          ),
+        ),
+        child: new Center(
+            child: Column(
+          children: <Widget>[
+            Expanded(child: Image.asset('images/CodeNightLapSticker.png')),
+            Text(
+              'Loading....',
+              style: TextStyle(color: Colors.black, fontSize: 18.0),
+            ),
+            CircularProgressIndicator()
+          ],
+        )),
       ),
     );
   }
