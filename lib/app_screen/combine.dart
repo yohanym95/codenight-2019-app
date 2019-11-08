@@ -29,8 +29,9 @@ class MyTabsState extends State<MyTabs> with SingleTickerProviderStateMixin{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.red,
         title: Text(
-          'Code Night v3.0'
+          'Code Night'
         ),
         bottom: TabBar(
           controller: controller,

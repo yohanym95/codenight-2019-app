@@ -7,6 +7,7 @@ class Thirdpage extends StatelessWidget{
       child: ListView(
         
         children: <Widget>[
+          
           Padding(
             padding: EdgeInsets.only(top: 10.0,left: 10.0,right: 10.0),
             child: Center(
@@ -19,6 +20,7 @@ class Thirdpage extends StatelessWidget{
               ),
             ),
           ),
+          
           Padding(
             padding: EdgeInsets.only(left: 10.0,right: 10.0, top: 10.0),
             child: Text(
@@ -27,6 +29,7 @@ class Thirdpage extends StatelessWidget{
                 fontStyle: FontStyle.normal,
                 fontSize: 16.0
               ),
+              textAlign: TextAlign.center,
             ),
           ),
           Padding(
@@ -37,6 +40,7 @@ class Thirdpage extends StatelessWidget{
                 fontSize:18.0,
                 fontWeight: FontWeight.w700
               ),
+              textAlign: TextAlign.center,
             ),
           ),
           Padding(

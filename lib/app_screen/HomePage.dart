@@ -1,8 +1,8 @@
+import 'package:codenight_app/app_screen/HackthonInformation.dart';
 import 'package:codenight_app/app_screen/registrationForm1.dart';
 import 'package:codenight_app/app_screen/registrationForm2.dart';
 import 'package:flutter/material.dart';
 import 'package:codenight_app/app_screen/combine.dart';
-
 
 class HomePage extends StatefulWidget {
   @override
@@ -51,47 +51,7 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       EdgeInsets.only(left: 30, right: 30, top: 60, bottom: 30),
                   child: Image.asset('images/CodeNightLogo.png')),
-              Padding(
-                padding: EdgeInsets.only(top: 25, bottom: 40),
-                child: MaterialButton(
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 30, right: 30),
-                    child: Text(
-                      'Registration',
-                      style: TextStyle(color: Colors.white,fontSize:20,fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  onPressed: () {
-                    _askHack();
-                  },
-                  color: Colors.red,
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(top: 40, bottom: 30),
-                child: MaterialButton(
-                  padding: EdgeInsets.only(left: 43, right: 43),
-                  child: Text(
-                    'Info',
-                    style: TextStyle(color: Colors.black,fontSize: 16,fontWeight: FontWeight.bold),
-                  ),
-
-                  onPressed: () {
-                    Navigator.push(context, 
-                    MaterialPageRoute(builder: (context)=>MyTabs()));
-                  },
-                  
-                )
-              ],
-            )
-          ],
-        )),
-      ),
-
-                 
-                  color: Colors.white12,
-                ),
-              )
+              
             ],
           )
         ],
