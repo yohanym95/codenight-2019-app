@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
         child: new SimpleDialog(
           contentPadding:
               EdgeInsets.only(right: 10, left: 10, top: 5, bottom: 5),
-          title: new Text("Select Your Hackthon Category"),
+          title: new Text("Choose Hackthon Category"),
           children: <Widget>[
             new MaterialButton(
               padding: EdgeInsets.all(5),
