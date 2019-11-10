@@ -21,10 +21,11 @@ class _HomePageState extends State<HomePage> {
           //backgroundColor: Colors.transparent,
           // appBar: AppBar(
           //   backgroundColor: Colors.transparent,
-          //   title: Text('CodeNight 2019'),
+          //  title: Text('CodeNight 2019'),
           // ),
           body: home(),
         ),
+
       ),
     );
   }
@@ -51,7 +52,27 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       EdgeInsets.only(left: 30, right: 30, top: 60, bottom: 30),
                   child: Image.asset('images/CodeNightLogo.png')),
-              
+              Column(
+                children: <Widget>[
+                  Container(
+                  child: RaisedButton(
+                    child: Text("About Us",
+                    
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white
+                    ),),
+                    color: Colors.red,
+                    padding: EdgeInsets.only(left: 80.0 , right: 80.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0)
+                    ),
+                    onPressed: (){},
+                  ),
+                  )
+                ],
+
+              )
             ],
           )
         ],
