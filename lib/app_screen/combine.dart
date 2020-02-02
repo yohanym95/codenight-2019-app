@@ -3,24 +3,41 @@ import 'package:codenight_app/app_screen/first_screen.dart' as Hackothon;
 import 'package:codenight_app/app_screen/second_screen.dart' as SOCS;
 import 'package:codenight_app/app_screen/third_screen.dart' as CIS;
 
-
-class MyTabs extends StatefulWidget{
+class MyTabs extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return MyTabsState();
   }
 }
-class MyTabsState extends State<MyTabs> with SingleTickerProviderStateMixin{
+
+class MyTabsState extends State<MyTabs>
+    with SingleTickerProviderStateMixin, TickerProviderStateMixin {
+  AnimationController controller1;
+  Animation<double> animation;
 
   TabController controller;
   @override
-  void initState(){
+  void initState() {
     super.initState();
-    controller=TabController(vsync: this,length: 3);
+    controller = TabController(vsync: this, length: 3);
+
+    controller1 = AnimationController(
+        duration: const Duration(milliseconds: 2000), vsync: this);
+    animation = CurvedAnimation(parent: controller1, curve: Curves.linear);
+
+    // animation.addStatusListener((status) {
+    //   if (status == AnimationStatus.completed) {
+    //     controller.reverse();
+    //   } else if (status == AnimationStatus.dismissed) {
+    //     controller.forward();
+    //   }
+    // });
+
+    controller1.forward();
   }
 
   @override
-  void dispose(){
+  void dispose() {
     controller.dispose();
     super.dispose();
   }
@@ -29,9 +46,8 @@ class MyTabsState extends State<MyTabs> with SingleTickerProviderStateMixin{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Code Night v3.0'
-        ),
+        backgroundColor: Colors.red,
+        title: Text('Code Night'),
         bottom: TabBar(
           controller: controller,
           tabs: <Tab>[
@@ -50,9 +66,9 @@ class MyTabsState extends State<MyTabs> with SingleTickerProviderStateMixin{
       body: TabBarView(
         controller: controller,
         children: <Widget>[
-          Hackothon.Firstpage(),
-          SOCS.Secondpage(),
-          CIS.Thirdpage()
+          FadeTransition(opacity: animation, child: Hackothon.Firstpage()),
+          FadeTransition(opacity: animation, child: SOCS.Secondpage()),
+          FadeTransition(opacity: animation, child: CIS.Thirdpage())
         ],
       ),
     );

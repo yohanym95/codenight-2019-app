@@ -56,11 +56,17 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
           children: <Widget>[
             Expanded(child: Image.asset('images/CodeNightLapSticker.png')),
-            Text(
-              'Loading....',
-              style: TextStyle(color: Colors.black, fontSize: 18.0),
+            Container(
+              child: CircularProgressIndicator()),
+            Container(
+              margin: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Loading....',
+                style: TextStyle(color: Colors.black, fontSize: 18.0,fontWeight:FontWeight.bold),
+              ),
             ),
-            CircularProgressIndicator()
+            
           ],
         )),
       ),

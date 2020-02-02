@@ -11,7 +11,7 @@ description: A new Flutter project.
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.0+1
+version: 1.0.0+3
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
@@ -23,6 +23,17 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
+  firebase_core: ^0.4.0+9
+  firebase_database: ^3.0.9
+  simple_animations: ^1.2.0
+  flutter_launcher_icons: ^0.7.4
+  modal_progress_hud: ^0.1.3
+
+flutter_icons:
+  image_path: "images/CodeNightLapSticker.png"
+  android: true
+  ios: true
+
 
 dev_dependencies:
   flutter_test:
@@ -50,6 +61,8 @@ flutter:
    - images/CodeNightLapSticker.png
    - images/assetsx.png
    - images/assetsxx.png
+   - images/socs.png
+   - images/cis.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

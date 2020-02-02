@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "165499201828",
+    "firebase_url": "https://codenight2019-c5be2.firebaseio.com",
+    "project_id": "codenight2019-c5be2",
+    "storage_bucket": "codenight2019-c5be2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165499201828:android:dabbbaa273ed6d0abbebb1",
+        "android_client_info": {
+          "package_name": "com.malshikay.codenight_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165499201828-u1aapb66svbqhr2m3fuaa5gm51orf437.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0y8WWIFrrA2UaDQ5xomK__RnH99VhKP4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165499201828-u1aapb66svbqhr2m3fuaa5gm51orf437.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
